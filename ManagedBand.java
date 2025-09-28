@@ -16,9 +16,6 @@ public class ManagedBand extends Band {
         this.jumlahTurTahunIni = jumlahTurTahunIni;
     }
     
-    // ... (Konstruktor & Getters/Setters) ...
-    
-    // Poin 1: Polymorphism - Overriding (Implementasi method abstrak)
     @Override
     public String getDetailTambahan() {
         return String.format(
@@ -28,15 +25,13 @@ public class ManagedBand extends Band {
             namaManager, jumlahTurTahunIni
         );
     }
-
-    // Poin 2: Polymorphism - Overloading (Tambahkan method hitungUsia dengan parameter berbeda)
     public String hitungUsia(int tahunSaatIni, String namaLabel) {
-        int usia = super.hitungUsia(tahunSaatIni); // Memanggil method dari parent class
+        int usia = super.hitungUsia(tahunSaatIni); 
         return nama + " telah bersama label " + namaLabel + " selama " + usia + " tahun!";
     }
     
     @Override
-    public String toString() { // Overriding toString() untuk tampilan spesifik
+    public String toString() {
         return String.format(
             "Jenis Band: Managed%n" +
             "Nama Band: %s%n" +
@@ -44,7 +39,7 @@ public class ManagedBand extends Band {
             "  Tahun Berdiri: %d%n" +
             "  Jumlah Anggota: %d%n" +
             "%s",
-            nama, genre, tahunBerdiri, jumlahAnggota, getDetailTambahan() // Memanggil hasil override
-        );
+            nama, genre, tahunBerdiri, jumlahAnggota, getDetailTambahan() 
     }
+
 }
