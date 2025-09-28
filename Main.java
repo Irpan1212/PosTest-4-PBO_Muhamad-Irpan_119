@@ -112,7 +112,7 @@ public class Main {
         }
     }
     
-    // Metode tampilkanSemuaBand(), ubahDataBand(), hapusBand(), dan cariBand() tidak perlu diubah.
+
     private static void tampilkanSemuaBand() {
         System.out.println("\n=== DAFTAR SEMUA BAND ===");
         ArrayList<Band> bands = bandService.getAllBands();
