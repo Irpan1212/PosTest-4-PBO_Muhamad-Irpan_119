@@ -29,19 +29,15 @@ public abstract class Band {
     public int hitungUsia(int tahunSaatIni) {
         return tahunSaatIni - tahunBerdiri;
     }
-    
-    // =========================================================
-    // GETTERS & SETTERS YANG BENAR (MEMPERBAIKI ERROR)
-    // =========================================================
 
     public String getNama() { 
-        return nama; // Kembalikan nilai String
+        return nama; 
     }
     public void setNama(String nama) {
-        this.nama = nama; // Tetapkan nilai
+        this.nama = nama;
     }
 
-    public String getGenre() { // TIPE KEMBALIAN HARUS STRING!
+    public String getGenre() { 
         return genre; 
     }
     public void setGenre(String genre) {
@@ -76,4 +72,5 @@ public abstract class Band {
             nama, genre, tahunBerdiri, jumlahAnggota, getDetailTambahan()
         );
     }
+
 }
