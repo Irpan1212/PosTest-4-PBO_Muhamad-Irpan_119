@@ -12,16 +12,11 @@ public class TouringBand extends Band {
     private String venueTerakhir;
     private int tiketTerjualTerakhir;
     
-    // Baris 15 (ERROR DI SINI)
     public TouringBand(String nama, String genre, int tahunBerdiri, int jumlahAnggota, String venueTerakhir, int tiketTerjualTerakhir) {
-        // Panggil konstruktor dari Superclass Band
         super(nama, genre, tahunBerdiri, jumlahAnggota); 
         this.venueTerakhir = venueTerakhir;
         this.tiketTerjualTerakhir = tiketTerjualTerakhir;
     }
-    // ... (Konstruktor & Getters/Setters) ...
-
-    // Poin 1: Polymorphism - Overriding (Implementasi method abstrak)
     @Override
     public String getDetailTambahan() {
         return String.format(
@@ -32,18 +27,16 @@ public class TouringBand extends Band {
         );
     }
     
-    // Poin 2: Polymorphism - Overloading (Contoh: Menghitung rata-rata tiket)
-    public double hitungRataRataTiket(int totalKonser, int totalTiket) { // Versi 1
+    public double hitungRataRataTiket(int totalKonser, int totalTiket) {
         return (double) totalTiket / totalKonser;
     }
     
-    public double hitungRataRataTiket(int totalKonser, double totalPendapatan) { // Versi 2 (Overloading)
-        // Logika berbeda, misalnya menghitung rata-rata pendapatan per konser
+    public double hitungRataRataTiket(int totalKonser, double totalPendapatan) { 
         return totalPendapatan / totalKonser;
     }
     
     @Override
-    public String toString() { // Overriding toString() untuk tampilan spesifik
+    public String toString() {
         return String.format(
             "Jenis Band: Touring%n" +
             "Nama Band: %s%n" +
@@ -54,4 +47,5 @@ public class TouringBand extends Band {
             nama, genre, tahunBerdiri, jumlahAnggota, getDetailTambahan()
         );
     }
+
 }
