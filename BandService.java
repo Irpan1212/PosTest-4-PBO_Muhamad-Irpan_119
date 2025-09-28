@@ -22,13 +22,11 @@ public class BandService implements BandManagement {
    @Override
     public ArrayList<Band> searchBands(String keyword) {
         ArrayList<Band> hasilPencarian = new ArrayList<>();
-        String key = keyword.toLowerCase(); // Hindari memanggil toLowerCase() berulang-ulang
+        String key = keyword.toLowerCase();
     
     for (Band band : bands) {
-        // Kondisi Positif: Jika ditemukan di Genre ATAU ditemukan di Nama
         if (band.getGenre().toLowerCase().contains(key) ||
             band.getNama().toLowerCase().contains(key)) {
-            
             hasilPencarian.add(band);
         }
     }
@@ -59,4 +57,5 @@ public class BandService implements BandManagement {
         }
         return null;
     }
+
 }
